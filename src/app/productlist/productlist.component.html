@@ -1,0 +1,14 @@
+<div class="container">
+  <app-leftbar></app-leftbar>
+  <!-- /.col-lg-3 -->
+  <hr />
+  <button routerLink="/create-product" class="btn btn-primary">
+    Add Product
+  </button>
+  <hr />
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col" *ngFor="let product of dataListing">
+      <app-productcard [productData]="product"></app-productcard>
+    </div>
+  </div>
+</div>

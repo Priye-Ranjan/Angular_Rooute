@@ -1,0 +1,35 @@
+<div class="card" style="width: 18rem">
+  <img [src]="userData.image1" alt="" />
+  <div class="card-body">
+    <h5 class="card-title">{{ userData.name }}</h5>
+    <p class="card-text">{{ userData.email1 }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ userData.city1 }}</li>
+    <li class="list-group-item">{{ userData.state1 }}</li>
+    <li class="list-group-item">{{ userData.country1 }}</li>
+  </ul>
+  <div class="card-body">
+    <button
+      [routerLink]="['/userview', userData.id]"
+      type="button"
+      class="btn btn-sm btn-outline-secondary"
+    >
+      View
+    </button>
+    <button
+      [routerLink]="['/edit-user', userData.id]"
+      type="button"
+      class="btn btn-sm btn-outline-secondary"
+    >
+      Edit
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-secondary"
+      (click)="deleteUser(userData.id)"
+    >
+      Delete
+    </button>
+  </div>
+</div>

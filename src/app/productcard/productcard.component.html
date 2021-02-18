@@ -1,0 +1,36 @@
+<div class="album py-5 bg-grey">
+  <div class="card shadow-sm">
+    <img [src]="productData.image" alt="" />
+
+    <div class="card-body">
+      <p class="card-text">
+        {{ productData.description }}
+      </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            [routerLink]="['/product', productData.id]"
+          >
+            View
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            [routerLink]="['/editproduct', productData.id]"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            (click)="deleteProduct(productData.id)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

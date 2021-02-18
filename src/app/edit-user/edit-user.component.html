@@ -1,0 +1,163 @@
+<div class="container">
+  <h1>Create User</h1>
+  <form [formGroup]="userFormGroup" (ngSubmit)="submitForm()">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">User Name</label>
+          <input type="text" formControlName="name" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('name').valid &&
+              userFormGroup.get('name').touched
+            "
+            >Please enter a value between 5 to 50</span
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">Email Id</label>
+          <input type="text" formControlName="email1" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('email1').valid &&
+              userFormGroup.get('email1').touched
+            "
+            >Please enter a value between 5 to 50</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">Mobile No</label>
+          <input type="number" formControlName="mobile1" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('mobile1').valid &&
+              userFormGroup.get('mobile1').touched
+            "
+            >Please enter only numeric digit</span
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">Password</label>
+          <input
+            type="password"
+            formControlName="password1"
+            class="form-control"
+          />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('password1').valid &&
+              userFormGroup.get('password1').touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">Country</label>
+          <input type="text" formControlName="country1" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('country1').valid &&
+              userFormGroup.get('country1').touched
+            "
+            >This is required field</span
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">State</label>
+          <input type="text" formControlName="state1" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('state1').valid &&
+              userFormGroup.get('state1').touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">City</label>
+          <input type="text" formControlName="city1" class="form-control" />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('city1').valid &&
+              userFormGroup.get('city1').touched
+            "
+            >This is required field</span
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="">Zipcode</label>
+          <input
+            type="number"
+            formControlName="zipcode1"
+            class="form-control"
+          />
+          <span
+            style="color: crimson"
+            *ngIf="
+              !userFormGroup.get('zipcode1').valid &&
+              userFormGroup.get('zipcode1').touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="">Gender</label><br />
+        <input
+          type="radio"
+          id="male"
+          name="gender1"
+          value="male"
+          formControlName="gender1"
+          class="form-control"
+        />
+        <label for="male">Male</label><br />
+        <input
+          type="radio"
+          id="female"
+          name="gender1"
+          value="female"
+          formControlName="gender1"
+          class="form-control"
+        />
+        <label for="female">Female</label><br />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <button class="bt btn-primary">Update User</button>
+      </div>
+    </div>
+  </form>
+</div>
